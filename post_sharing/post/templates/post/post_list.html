@@ -1,0 +1,22 @@
+<head>
+    <style>
+        ul>li {
+            list-style: none
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="/post/upload/"><button>Add Post</button></a>
+    </nav>
+    <h4>All Post</h4>
+
+    {% for post in post_list %}
+    <ul>
+        <img src="{{post.image}}" alt="{{post.image}}" width="250" , height="160">
+        <li>Title: {{post.title}}</li>
+    </ul>
+    <br><br>
+    {% endfor %}
+</body>

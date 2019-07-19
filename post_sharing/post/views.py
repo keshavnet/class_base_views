@@ -10,9 +10,17 @@ from .models import Post
 class upload(generic.CreateView):
     form_class = PostForm
     template_name = 'post/add_post.html'
-    success_url = '/thanks/'
-    
+    success_url = '/post/uploadedSuccess/'
 
-
+class uploadedSuccess(generic.ListView):
+    model = Post
+    template_name = 'post/uploaded_successfully.html'
+   
+class postList(generic.ListView):
+    posts = Post.objects.all()
+    print('----------------------------------')
+    print('Posts ---->', Post)
+    model = Post
+    template_name = 'post/post_list.html'
 
 
