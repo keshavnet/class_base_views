@@ -7,6 +7,10 @@
 </head>
 
 <body>
+    <nav>
+        <a href="/post/list/"><button>View All Post</button></a>
+    </nav>
+    <br><br>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
