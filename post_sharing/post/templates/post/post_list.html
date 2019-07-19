@@ -13,8 +13,9 @@
     <h4>All Post</h4>
 
     {% for post in post_list %}
+    <img src="media/img_1.jpeg" alt="">
     <ul>
-        <img src="{{post.image}}" alt="{{post.image}}" width="250" , height="160">
+        <img src="{{post.image.url}}" alt="{{post.title}}" width="250" , height="160">
         <li>Title: {{post.title}}</li>
     </ul>
     <br><br>
